@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fürbitten für Hannas Taufe</title>
+    <!-- Google Fonts for beautiful typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Great Vibes', 'cursive'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            cream: '#faf6fc',
+                            softLilac: '#ebdcf5',
+                            lilac: '#b28dca',
+                            darkLilac: '#5a3f68',
+                            sage: '#8fa89b',
+                            charcoal: '#3d3142',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #faf6fc;
+            color: #3d3142;
+        }
+        /* Orion Button Styling */
+        .orion-button {
+            background: linear-gradient(135deg, #b28dca 0%, #875d9e 100%);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(178, 141, 202, 0.4);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .orion-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(178, 141, 202, 0.6);
+            background: linear-gradient(135deg, #c8a2e0 0%, #76488d 100%);
+        }
+        .orion-button:active {
+            transform: translateY(0);
+        }
+        /* Secondary Orion Button */
+        .orion-button-secondary {
+            background: #ffffff;
+            color: #3d3142;
+            border: 1px solid #ebdcf5;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .orion-button-secondary:hover {
+            border-color: #b28dca;
+            color: #5a3f68;
+            box-shadow: 0 4px 15px rgba(178, 141, 202, 0.1);
+        }
+        @media print {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-page {
+                display: block !important;
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 20px;
+                box-shadow: none !important;
+                background: white !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-softLilac selection:text-brand-darkLilac">
+
+    <div class="min-h-screen flex flex-col justify-between">
+        <main class="flex-grow max-w-6xl mx-auto px-4 py-8 md:py-16 no-print">
+            
+            <!-- Header Banner -->
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-lilac font-cursive text-5xl md:text-6xl block">Willkommen zur Taufe</span>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-charcoal tracking-wide font-semibold">
+                    Fürbitten für unsere kleine Hanna
+                </h1>
+                <p class="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Zehn feinsinnige Fürbitten für die feierliche Zeremonie am Sonntag, dem 30. August 2026, in Norderstedt mit anschließender Gartenparty.
+                </p>
+                <div class="flex justify-center items-center gap-3 pt-4">
+                    <span class="h-[1px] w-12 bg-brand-lilac opacity-40"></span>
+                    <svg class="w-6 h-6 text-brand-lilac opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span class="h-[1px] w-12 bg-brand-lilac opacity-40"></span>
+                </div>
+            </div>
+
+            <!-- Main Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: List of 10 Fürbitten -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="font-serif text-2xl text-brand-charcoal font-semibold">Die Auswahl der Fürbitten</h2>
+                        <span class="text-xs uppercase tracking-wider text-brand-sage font-semibold">10 feierliche Wünsche</span>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap gap-2 pb-2">
+                        <button onclick="filterPrayers('all')" id="btn-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-lilac text-white shadow-sm transition-all duration-300">Alle</button>
+                        <button onclick="filterPrayers('schutz')" id="btn-schutz" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-brand-charcoal border border-gray-100 hover:border-brand-lilac transition-all duration-300">Schutz und Begleitung</button>
+                        <button onclick="filterPrayers('liebe')" id="btn-liebe" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-brand-charcoal border border-gray-100 hover:border-brand-lilac transition-all duration-300">Liebe und Familie</button>
+                        <button onclick="filterPrayers('mut')" id="btn-mut" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-brand-charcoal border border-gray-100 hover:border-brand-lilac transition-all duration-300">Mut und Lebensweg</button>
+                    </div>
+
+                    <!-- List container -->
+                    <div id="prayers-list" class="space-y-4">
+                        <!-- Content injected via javascript -->
+                    </div>
+                </div>
+
+                <!-- Right: Visualizer and Configurator -->
+                <div class="lg:col-span-5 lg:sticky lg:top-8 space-y-6">
+                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl shadow-brand-softLilac/20 border border-brand-softLilac/30 relative overflow-hidden">
+                        
+                        <div class="absolute top-0 right-0 transform translate-x-8 -translate-y-8 opacity-10">
+                            <svg width="200" height="200" viewBox="0 0 100 100" fill="currentColor" class="text-brand-lilac">
+                                <path d="M50 15 C45 35 30 45 10 50 C30 55 45 70 50 90 C55 70 70 55 90 50 C70 45 55 35 50 15 Z" />
+                            </svg>
+                        </div>
+
+                        <div class="relative z-10 space-y-6">
+                            <div class="flex items-center gap-3">
+                                <span class="p-2 bg-brand-softLilac rounded-xl text-brand-darkLilac">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </span>
+                                <h3 class="font-serif text-xl text-brand-charcoal font-semibold">Auswahl & Ablauf</h3>
+                            </div>
+
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                Gestalten Sie das Kirchenheft für den Festgottesdienst am Sonntag, dem 30. August 2026. Weisen Sie den Verwandten und Paten die Lesungen zu, bevor Sie gemeinsam im Garten feiern.
+                            </p>
+
+                            <hr class="border-gray-100">
+
+                            <!-- Selection List -->
+                            <div class="space-y-4">
+                                <h4 class="text-xs uppercase tracking-wider text-brand-sage font-bold">Ausgewählte Fürbitten</h4>
+                                <div id="selected-prayers-container" class="space-y-3 max-h-[280px] overflow-y-auto pr-1">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+
+                            <!-- Orion-button Actions -->
+                            <div class="pt-4 space-y-3">
+                                <button onclick="openPrintPreview()" class="w-full py-3 px-6 rounded-2xl font-semibold text-center text-sm orion-button flex justify-center items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                                    </svg>
+                                    Druckvorlage erstellen
+                                </button>
+                                <button onclick="resetSelection()" class="w-full bg-transparent hover:bg-gray-50 text-gray-500 py-2.5 rounded-xl text-xs font-medium transition-all duration-300">
+                                    Auswahl zurücksetzen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Lilac Design Motif Box -->
+                    <div class="bg-brand-cream border border-brand-softLilac/50 rounded-3xl p-6 flex flex-col items-center text-center space-y-3">
+                        <div class="relative w-28 h-20 mb-2">
+                            <!-- Beautiful Lilac Rainbow -->
+                            <div class="absolute inset-0 flex items-end justify-center">
+                                <div class="w-24 h-12 border-t-8 border-brand-softLilac rounded-t-full"></div>
+                            </div>
+                            <div class="absolute inset-0 flex items-end justify-center">
+                                <div class="w-16 h-8 border-t-8 border-brand-lilac/60 rounded-t-full"></div>
+                            </div>
+                            <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-brand-lilac text-sm">💜</div>
+                            <!-- Little bunny graphic in soft lilac tones -->
+                            <div class="absolute bottom-0 left-1 w-6 h-10 bg-brand-softLilac/60 rounded-t-full rounded-b-md flex flex-col justify-between items-center py-1">
+                                <div class="flex justify-between w-4">
+                                    <div class="w-1 h-3 bg-brand-lilac/40 rounded-full"></div>
+                                    <div class="w-1 h-3 bg-brand-lilac/40 rounded-full"></div>
+                                </div>
+                                <div class="w-2 h-2 bg-brand-lilac/60 rounded-full"></div>
+                            </div>
+                            <div class="absolute top-2 right-2 text-xs">🪻</div>
+                        </div>
+                        <h4 class="font-serif text-brand-charcoal text-base font-semibold">Gartenfest & Tauf-Harmonie</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed max-w-xs">
+                            Passend zur lila Dekoration des anschließenden Sommerfestes im sommerlichen Garten. Ein unvergesslicher Tag im Kreise der Familie.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- PRINT PREVIEW OVERLAY -->
+        <div id="interactive-print-preview" class="hidden fixed inset-0 z-50 bg-white overflow-y-auto p-4 md:p-12">
+            <div class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl border border-gray-100 shadow-2xl relative">
+                
+                <button onclick="closePrintPreview()" class="absolute top-6 right-6 no-print bg-gray-100 hover:bg-gray-200 text-gray-600 p-2.5 rounded-full transition-all duration-300">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+                <!-- Lilac Motif on printed sheet -->
+                <div class="flex flex-col items-center text-center space-y-6 mb-12">
+                    <div class="relative w-40 h-24 mb-4">
+                        <div class="absolute inset-0 flex items-end justify-center">
+                            <div class="w-36 h-18 border-t-[10px] border-brand-softLilac rounded-t-full"></div>
+                        </div>
+                        <div class="absolute inset-0 flex items-end justify-center">
+                            <div class="w-24 h-12 border-t-[10px] border-brand-lilac/50 rounded-t-full"></div>
+                        </div>
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-brand-lilac text-xl">💜</div>
+                        <div class="absolute top-2 right-4 text-xl">🪻</div>
+                        <div class="absolute top-1 left-6 text-lg">🌿</div>
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl md:text-4xl text-brand-charcoal font-bold">Fürbitten für Hannas heilige Taufe</h2>
+                    <p class="text-sm font-serif italic text-brand-sage">Norderstedt am 30. August 2026</p>
+                    <div class="h-[1px] w-48 bg-brand-softLilac"></div>
+                </div>
+
+                <div id="print-prayers-output" class="space-y-12 my-10">
+                    <!-- Javascript populates -->
+                </div>
+
+                <div class="text-center mt-16 pt-8 border-t border-brand-softLilac/30">
+                    <p class="font-cursive text-3xl text-brand-lilac">In unendlicher Liebe, Hanna x</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-2">Anschließende Feier im sommerlichen Familiengarten</p>
+                </div>
+
+                <div class="mt-12 text-center no-print">
+                    <button onclick="window.print()" class="py-3 px-8 rounded-2xl font-semibold orion-button inline-flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                        </svg>
+                        Jetzt drucken
+                    </button>
+                    <p class="text-xs text-gray-400 mt-2">Drucken Sie diese Seite auf hochwertiges Papier aus.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Toast notifications -->
+        <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-charcoal text-brand-cream text-sm py-3 px-6 rounded-2xl shadow-xl transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2">
+            <span id="toast-message">Kopiert!</span>
+        </div>
+
+        <footer class="bg-brand-cream py-8 border-t border-brand-softLilac/20 text-center no-print mt-12">
+            <p class="text-xs text-gray-500 font-medium">In Liebe gestaltet für Hanna | Norderstedt</p>
+        </footer>
+    </div>
+
+    <!-- Logic -->
+    <script>
+        const prayersData = [
+            {
+                id: 1,
+                category: 'schutz',
+                title: 'Schutz und sichere Begleitung',
+                text: 'Lieber Gott, wir bitten dich für Hanna. Begleite sie auf all ihren Wegen und halte schützend deine liebende Hand über sie. Lass sie in Geborgenheit aufwachsen und schenke ihr stets Menschen, die ihr den Weg weisen und ihr Licht schenken, wenn es einmal dunkel um sie wird.',
+                shortText: 'Begleite Hanna auf all ihren Wegen und halte deine schützende Hand über sie.'
+            },
+            {
+                id: 2,
+                category: 'liebe',
+                title: 'Urvertrauen und grenzenlose Liebe',
+                text: 'Himmlischer Vater, erfülle das Herz von Hanna mit unendlicher Liebe und festem Urvertrauen. Lass sie im Aufwachsen immer die Gewissheit in sich tragen, dass sie genau so, wie sie ist, vollkommen und bedingungslos von uns allen geliebt wird.',
+                shortText: 'Erfülle ihr Herz mit unendlicher Liebe und dem tiefen Gefühl der Geborgenheit.'
+            },
+            {
+                id: 3,
+                category: 'schutz',
+                title: 'Freunde und verlässliche Wegbegleiter',
+                text: 'Wir bitten dich, schenke Hanna treue Freunde, die mit ihr lachen, mit ihr weinen und die Welt entdecken. Lass sie niemals einsam sein und stets verlässliche und liebevolle Wegbegleiter an ihrer Seite wissen, auf die sie bauen kann.',
+                shortText: 'Schenke ihr treue Freunde, die mit ihr durch das Leben gehen.'
+            },
+            {
+                id: 4,
+                category: 'mut',
+                title: 'Mut und tiefe Zuversicht',
+                text: 'Gib Hanna den Mut, ihren eigenen, ganz persönlichen Lebensweg mit aufrechtem Haupt zu gehen, selbst wenn er einmal steinig sein sollte. Schenke ihr die nötige Kraft und Zuversicht, nach jedem Stolpern wieder aufzustehen und mit einem Lächeln weiterzugehen.',
+                shortText: 'Schenke ihr den Mut, ihren eigenen Weg voller Zuversicht zu gehen.'
+            },
+            {
+                id: 5,
+                category: 'liebe',
+                title: 'Die Eltern und liebevolle Paten',
+                text: 'Wir bitten dich für Hannas Eltern und ihre Paten. Schenke ihnen täglich Geduld, unerschöpfliche Kraft und tiefe Weisheit, um Hanna mit grenzenloser Liebe zu begleiten, ihr sicheren Halt zu schenken und ihr zugleich Freiraum zum Wachsen zu geben.',
+                shortText: 'Schenke den Eltern und Paten viel Kraft und Geduld bei der Begleitung.'
+            },
+            {
+                id: 6,
+                category: 'mut',
+                title: 'Lebensfreude und offene Augen',
+                text: 'Lass Hanna die Welt stets mit offenen und staunenden Augen betrachten. Schenke ihr ein fröhliches Herz, das die kleinen Wunder des Alltags freudig erkennt und die wunderbare Schönheit der Schöpfung schützt und bewahrt.',
+                shortText: 'Schenke ihr ein fröhliches Herz und Augen, die die kleinen Wunder sehen.'
+            },
+            {
+                id: 7,
+                category: 'mut',
+                title: 'Frieden und ein weites Herz',
+                text: 'Wir bitten dich, lass Hanna in einer friedlichen Welt heranwachsen. Gib ihr die Gabe, anderen Menschen mit Toleranz, Mitgefühl und einem offenen Herzen zu begegnen, damit sie Frieden in die Herzen ihrer Mitmenschen trägt.',
+                shortText: 'Lass sie in Frieden aufwachsen und anderen mit einem weiten Herzen begegnen.'
+            },
+            {
+                id: 8,
+                category: 'schutz',
+                title: 'Gesundheit für Körper und Seele',
+                text: 'Schenke der kleinen Hanna reichlich Gesundheit für ihren Körper und ihre Seele. Möge sie stark werden an allen Herausforderungen des Lebens und immer die nötige innere Ruhe finden, um gestärkt und glücklich durch den Alltag zu gehen.',
+                shortText: 'Schenke ihr lebenslange Gesundheit für Körper, Geist und Seele.'
+            },
+            {
+                id: 9,
+                category: 'liebe',
+                title: 'Glaube, Hoffnung und Lebensmut',
+                text: 'Lass Hanna im festen Glauben an das Gute aufwachsen. Möge die Hoffnung ihr ständiger, treuer Begleiter sein, damit sie mit einem zuversichtlichen Blick und voller Lebensmut in die Zukunft schaut und das Leben liebt.',
+                shortText: 'Möge der Glaube an das Gute und die Hoffnung ihr ständiger Begleiter sein.'
+            },
+            {
+                id: 10,
+                category: 'liebe',
+                title: 'Segen für die gesamte Familie',
+                text: 'Segne diese liebevolle Familie, die sich heute um Hanna versammelt hat. Lass das unsichtbare Band der Liebe zwischen uns allen mit jedem Tag stärker werden und erfülle ihr schönes Zuhause und das fröhliche Fest heute im Garten stets mit glücklichem Lachen, tiefer Geborgenheit und ewigem Frieden.',
+                shortText: 'Segne die Familie und erfülle ihr Zuhause mit unendlichem Frieden.'
+            }
+        ];
+
+        let selectedIds = [1, 2, 10];
+        let readerAssignments = {
+            1: 'Oma',
+            2: 'Pate Martin',
+            10: 'Tante Billie'
+        };
+
+        function init() {
+            renderPrayers();
+            renderSelectedPrayers();
+        }
+
+        function renderPrayers(filter = 'all') {
+            const listContainer = document.getElementById('prayers-list');
+            listContainer.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? prayersData 
+                : prayersData.filter(p => p.category === filter);
+
+            filtered.forEach((p) => {
+                const isSelected = selectedIds.includes(p.id);
+                const categoryLabels = {
+                    schutz: 'Schutz und Begleitung',
+                    liebe: 'Liebe und Familie',
+                    mut: 'Mut und Lebensweg'
+                };
+
+                const cardHtml = `
+                    <div class="bg-white rounded-2xl p-6 border ${isSelected ? 'border-brand-lilac ring-1 ring-brand-lilac' : 'border-gray-100'} hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-start">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-sage">${categoryLabels[p.category]}</span>
+                                <span class="text-xs text-gray-300 font-semibold font-serif">#${p.id}</span>
+                            </div>
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal font-semibold">${p.title}</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">${p.text}</p>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <button onclick="copyToClipboard('${p.text.replace(/'/g, "\\'")}')" class="text-xs font-semibold text-brand-sage hover:text-brand-charcoal transition-all duration-300 flex items-center gap-1.5">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                                </svg>
+                                Text kopieren
+                            </button>
+                            
+                            <button onclick="toggleSelection(${p.id})" class="p-2.5 rounded-full transition-all duration-300 ${isSelected ? 'bg-brand-lilac/10 text-brand-lilac' : 'bg-gray-50 text-gray-400 hover:text-brand-lilac'}" title="${isSelected ? 'Abwählen' : 'Auswählen'}">
+                                <svg class="w-5 h-5 ${isSelected ? 'fill-current' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                listContainer.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        function renderSelectedPrayers() {
+            const container = document.getElementById('selected-prayers-container');
+            container.innerHTML = '';
+
+            if (selectedIds.length === 0) {
+                container.innerHTML = `<p class="text-sm text-gray-400 italic">Noch keine Fürbitten ausgewählt. Klicken Sie auf das Herz einer Fürbitte auf der linken Seite.</p>`;
+                return;
+            }
+
+            selectedIds.forEach(id => {
+                const item = prayersData.find(p => p.id === id);
+                if (!item) return;
+
+                const reader = readerAssignments[id] || '';
+
+                const elHtml = `
+                    <div class="bg-brand-cream rounded-xl p-3 border border-brand-softLilac/50 space-y-2 flex flex-col justify-between">
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="min-w-0">
+                                <p class="text-xs font-semibold text-brand-charcoal truncate">${item.title}</p>
+                                <p class="text-[11px] text-gray-500 line-clamp-1 mt-0.5">${item.shortText}</p>
+                            </div>
+                            <button onclick="toggleSelection(${id})" class="text-gray-300 hover:text-brand-lilac transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2 pt-1 border-t border-brand-softLilac/10">
+                            <span class="text-[10px] uppercase font-bold text-brand-sage shrink-0">Vorleser:</span>
+                            <input 
+                                type="text" 
+                                value="${reader}" 
+                                placeholder="Name der lesenden Person" 
+                                oninput="updateReader(${id}, this.value)"
+                                class="w-full bg-white/70 border border-brand-softLilac/30 rounded-md py-1 px-2 text-xs text-brand-charcoal placeholder-gray-300 focus:outline-none focus:border-brand-lilac transition-all duration-200"
+                            />
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', elHtml);
+            });
+        }
+
+        function toggleSelection(id) {
+            const index = selectedIds.indexOf(id);
+            if (index > -1) {
+                selectedIds.splice(index, 1);
+                delete readerAssignments[id];
+            } else {
+                selectedIds.push(id);
+            }
+            renderPrayers();
+            renderSelectedPrayers();
+        }
+
+        function updateReader(id, value) {
+            readerAssignments[id] = value;
+        }
+
+        function resetSelection() {
+            selectedIds = [];
+            readerAssignments = {};
+            renderPrayers();
+            renderSelectedPrayers();
+            showToast('Auswahl wurde zurückgesetzt');
+        }
+
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('Text erfolgreich kopiert');
+                } else {
+                    showToast('Kopieren fehlgeschlagen');
+                }
+            } catch (err) {
+                showToast('Fehler beim Kopieren');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.innerText = message;
+            
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        function filterPrayers(category) {
+            const buttons = ['all', 'schutz', 'liebe', 'mut'];
+            buttons.forEach(btn => {
+                const el = document.getElementById(`btn-${btn}`);
+                if (btn === category) {
+                    el.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-lilac text-white shadow-sm transition-all duration-300";
+                } else {
+                    el.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-brand-charcoal border border-gray-100 hover:border-brand-lilac transition-all duration-300";
+                }
+            });
+            renderPrayers(category);
+        }
+
+        function openPrintPreview() {
+            if (selectedIds.length === 0) {
+                showToast('Bitte wählen Sie zuerst passende Fürbitten aus');
+                return;
+            }
+
+            const printContainer = document.getElementById('print-prayers-output');
+            printContainer.innerHTML = '';
+
+            selectedIds.forEach((id, index) => {
+                const item = prayersData.find(p => p.id === id);
+                if (!item) return;
+
+                const reader = readerAssignments[id];
+                const readerTag = reader ? `<span class="no-print block text-xs font-bold text-brand-sage uppercase tracking-wider mt-2">Vorgetragen von: ${reader}</span>` : '';
+
+                const printableItemHtml = `
+                    <div class="space-y-3 pb-8 border-b border-brand-softLilac/20 last:border-0">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-serif text-xl text-brand-charcoal font-semibold">${index + 1}. Fürbitte: ${item.title}</h3>
+                            <span class="text-xs text-gray-400">Nummer ${item.id}</span>
+                        </div>
+                        <p class="font-serif text-lg text-gray-700 leading-relaxed italic">"${item.text}"</p>
+                        ${readerTag}
+                    </div>
+                `;
+                printContainer.insertAdjacentHTML('beforeend', printableItemHtml);
+            });
+
+            document.getElementById('interactive-print-preview').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrintPreview() {
+            document.getElementById('interactive-print-preview').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        window.onload = function() {
+            init();
+        };
+    </script>
+</body>
+</html>
