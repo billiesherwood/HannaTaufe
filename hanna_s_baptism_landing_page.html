@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannas heilige Taufe</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Great Vibes', 'cursive'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            cream: '#faf6fc',
+                            softLilac: '#ebdcf5',
+                            lilac: '#b28dca',
+                            darkLilac: '#5a3f68',
+                            tealInk: '#457b9d',
+                            darkTeal: '#1d3557',
+                            sage: '#8fa89b',
+                            charcoal: '#3d3142',
+                        }
+                    },
+                    boxShadow: {
+                        orion: '0 4px 20px rgba(178, 141, 202, 0.15), 0 2px 8px rgba(0, 0, 0, 0.05)',
+                        orionHover: '0 12px 30px rgba(178, 141, 202, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #faf6fc;
+            color: #3d3142;
+        }
+        .paper-cut-shadow {
+            box-shadow: inset 0 2px 4px rgba(90, 63, 104, 0.05), 0 10px 30px rgba(90, 63, 104, 0.08);
+        }
+        .orion-button-lilac {
+            background: linear-gradient(135deg, #b28dca 0%, #875d9e 100%);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(178, 141, 202, 0.4);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .orion-button-lilac:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(178, 141, 202, 0.6);
+            background: linear-gradient(135deg, #c8a2e0 0%, #76488d 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-brand-cream min-h-screen flex flex-col justify-between">
+
+    <div class="w-full py-3 bg-brand-cream border-b border-brand-softLilac/40 text-center text-[11px] font-bold uppercase tracking-widest text-brand-tealInk px-4">
+        🌸 Einladung zur Taufe von Hanna am 30. August 2026 in Norderstedt 🌸
+    </div>
+
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center space-y-16 w-full">
+
+        <!-- Welcome Section -->
+        <div class="w-full text-center space-y-4 max-w-3xl">
+            <span class="text-brand-tealInk font-serif text-lg tracking-widest uppercase block">Einladung zur Taufe</span>
+            <h1 class="text-brand-lilac font-cursive text-7xl md:text-8xl block select-none">Hanna</h1>
+            <div class="flex justify-center items-center gap-3">
+                <span class="h-[1px] w-8 bg-brand-lilac opacity-40"></span>
+                <span class="text-brand-sage text-base">🌿</span>
+                <span class="h-[1px] w-8 bg-brand-lilac opacity-40"></span>
+            </div>
+        </div>
+
+        <!-- The Physical Invitation Card Replica (Lilac Watercolor and Slate Inks) -->
+        <div class="w-full max-w-3xl bg-white rounded-3xl p-8 md:p-12 paper-cut-shadow border border-brand-softLilac/40 text-center space-y-8 relative overflow-hidden">
+            
+            <!-- Stamped Christian Iconography Row - Enlarged & Enhanced -->
+            <div class="flex justify-center items-center gap-8 md:gap-16">
+                <div class="w-16 h-16 rounded-full bg-brand-softLilac/40 border border-brand-softLilac/70 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300" title="Der Fisch">
+                    <span class="text-3xl filter drop-shadow">🐟</span>
+                </div>
+                <div class="w-20 h-20 rounded-full bg-brand-softLilac/60 border border-brand-softLilac flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300" title="Die Kirche">
+                    <span class="text-4xl filter drop-shadow">⛪</span>
+                </div>
+                <div class="w-16 h-16 rounded-full bg-brand-softLilac/40 border border-brand-softLilac/70 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300" title="Die Friedenstaube">
+                    <span class="text-3xl filter drop-shadow">🕊️</span>
+                </div>
+            </div>
+
+            <!-- Bible Verse Header -->
+            <div class="max-w-lg mx-auto space-y-3">
+                <p class="font-serif italic text-lg md:text-xl text-brand-darkLilac leading-relaxed">
+                    "Sei mutig und stark! Fürchte dich nicht, denn der Herr, dein Gott, ist mit dir bei allem, was du unternimmst."
+                </p>
+                <p class="text-xs uppercase tracking-widest text-brand-sage font-bold font-sans">
+                    (Josua 1,9)
+                </p>
+            </div>
+
+            <div class="h-[1px] w-1/3 bg-brand-softLilac mx-auto"></div>
+
+            <!-- Invitation Text -->
+            <div class="space-y-4 max-w-lg mx-auto">
+                <p class="font-serif text-lg text-brand-charcoal leading-relaxed">
+                    Ihr seid herzlich zur Taufe unserer Tochter Hanna eingeladen. Im Anschluss werden wir gemeinsam in unserem Garten feiern.
+                </p>
+            </div>
+
+            <!-- Event Details -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-brand-charcoal">
+                <div class="p-4 rounded-2xl bg-brand-cream border border-brand-softLilac/20 space-y-1 hover:border-brand-lilac/30 transition-colors">
+                    <span class="text-[10px] uppercase font-bold text-brand-sage tracking-wider block">Datum</span>
+                    <span class="font-serif text-lg font-bold text-brand-tealInk">30.08.2026</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-cream border border-brand-softLilac/20 space-y-1 hover:border-brand-lilac/30 transition-colors">
+                    <span class="text-[10px] uppercase font-bold text-brand-sage tracking-wider block">Ort der Trauung</span>
+                    <span class="font-serif text-sm font-bold text-brand-darkLilac block">Vicelinkirche</span>
+                    <span class="text-xs text-gray-500">Norderstedt</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-cream border border-brand-softLilac/20 space-y-1 hover:border-brand-lilac/30 transition-colors">
+                    <span class="text-[10px] uppercase font-bold text-brand-sage tracking-wider block">Uhrzeit</span>
+                    <span class="font-serif text-lg font-bold text-brand-tealInk">11:15 Uhr</span>
+                </div>
+            </div>
+
+            <!-- Sign-off Block -->
+            <div class="space-y-1 pt-4">
+                <p class="text-xs uppercase tracking-widest text-brand-sage font-bold">Wir freuen uns auf euch</p>
+                <p class="font-serif text-2xl font-bold text-brand-darkLilac">Sylvie, Paul & Hanna</p>
+            </div>
+
+        </div>
+
+        <!-- Theme-Coloured Route Map -->
+        <div class="w-full max-w-3xl bg-white rounded-3xl p-6 md:p-8 border border-brand-softLilac/40 shadow-orion space-y-6">
+            <div class="text-center space-y-1">
+                <h3 class="font-serif text-xl md:text-2xl text-brand-charcoal font-bold">Ablauf & Wegbeschreibung</h3>
+                <p class="text-xs text-gray-500">Von der feierlichen Zeremonie direkt in den geschmückten Sommergarten</p>
+            </div>
+
+            <!-- Live Google Map Iframe for route directions -->
+            <div class="relative w-full h-80 md:h-96 rounded-2xl border border-brand-softLilac/30 overflow-hidden shadow-inner">
+                <iframe 
+                    class="w-full h-full" 
+                    src="https://maps.google.com/maps?saddr=Vicelinkirche+Norderstedt&daddr=Aurikelstieg+19,+22850+Norderstedt&hl=de&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Maps Button Actions -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="https://maps.google.com/?q=Vicelinkirche+Norderstedt" target="_blank" class="flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-brand-cream border border-brand-softLilac/60 text-brand-darkLilac font-bold text-sm hover:border-brand-lilac transition-all shadow-sm">
+                    <span>📍</span> Navigation zur Vicelinkirche
+                </a>
+                <a href="https://maps.google.com/?q=Aurikelstieg+19,+22850+Norderstedt" target="_blank" class="flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-brand-cream border border-brand-softLilac/60 text-brand-darkLilac font-bold text-sm hover:border-brand-lilac transition-all shadow-sm">
+                    <span>🌸</span> Navigation zum Gartenfest
+                </a>
+            </div>
+        </div>
+
+        <!-- Interactive RSVP Tool -->
+        <div id="rsvp-section" class="w-full max-w-3xl bg-white rounded-3xl p-8 border border-brand-softLilac/40 shadow-orion space-y-6">
+            <div class="text-center space-y-1">
+                <h3 class="font-serif text-xl md:text-2xl text-brand-charcoal font-bold">Rückmeldung (RSVP)</h3>
+                <p class="text-xs text-gray-500">Bitte teilen Sie uns bald mit, ob Sie mit uns feiern können</p>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs uppercase font-bold tracking-wider text-brand-sage mb-2">Ihr Name / Ihre Namen</label>
+                    <input type="text" id="rsvp-name" placeholder="z.B. Tante Billie & Martin" class="w-full px-4 py-3 rounded-xl border border-brand-softLilac bg-brand-cream/30 text-brand-charcoal font-medium placeholder-gray-400 focus:outline-none focus:border-brand-lilac transition-colors">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold tracking-wider text-brand-sage mb-2">Teilnahme</label>
+                        <select id="rsvp-status" class="w-full px-4 py-3 rounded-xl border border-brand-softLilac bg-brand-cream/30 text-brand-charcoal font-medium focus:outline-none focus:border-brand-lilac transition-colors">
+                            <option value="kirche-garten">Ich komme zu beidem</option>
+                            <option value="nur-kirche">Nur zur Kirche</option>
+                            <option value="nur-garten">Nur zur Gartenparty</option>
+                            <option value="absage">Kann leider nicht kommen</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase font-bold tracking-wider text-brand-sage mb-2">Besonderheiten (Essen / Allergien)</label>
+                        <input type="text" id="rsvp-diet" placeholder="z.B. Vegetarisch, glutenfrei" class="w-full px-4 py-3 rounded-xl border border-brand-softLilac bg-brand-cream/30 text-brand-charcoal font-medium focus:outline-none focus:border-brand-lilac transition-colors">
+                    </div>
+                </div>
+
+                <button onclick="sendRSVP()" class="w-full py-3 px-6 rounded-2xl font-bold text-center text-sm orion-button-lilac flex justify-center items-center gap-2">
+                    <span>💬</span> Rückmeldung per WhatsApp senden
+                </button>
+            </div>
+        </div>
+
+        <!-- Interactive Live Countdown to the Special Sunday -->
+        <div class="w-full max-w-3xl text-center space-y-4 bg-brand-cream/60 border border-brand-softLilac/30 rounded-3xl p-6">
+            <h3 class="font-serif text-base font-bold text-brand-darkLilac uppercase tracking-wider">Der Countdown zur Taufe</h3>
+            <div class="grid grid-cols-4 gap-2 md:gap-4 max-w-sm mx-auto">
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-brand-softLilac/20">
+                    <span id="days" class="font-serif text-xl md:text-2xl font-bold text-brand-tealInk block">00</span>
+                    <span class="text-[9px] uppercase font-bold text-brand-sage block">Tage</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-brand-softLilac/20">
+                    <span id="hours" class="font-serif text-xl md:text-2xl font-bold text-brand-tealInk block">00</span>
+                    <span class="text-[9px] uppercase font-bold text-brand-sage block">Stunden</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-brand-softLilac/20">
+                    <span id="minutes" class="font-serif text-xl md:text-2xl font-bold text-brand-tealInk block">00</span>
+                    <span class="text-[9px] uppercase font-bold text-brand-sage block">Minuten</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-brand-softLilac/20">
+                    <span id="seconds" class="font-serif text-xl md:text-2xl font-bold text-brand-tealInk block">00</span>
+                    <span class="text-[9px] uppercase font-bold text-brand-sage block">Sekunden</span>
+                </div>
+            </div>
+            <p class="text-[11px] text-gray-400 italic">Bis zum Festgottesdienst in Norderstedt und der anschließenden Gartenparty</p>
+        </div>
+
+        <!-- Navigation Hub: The Fuerbitten Project Portal (Orion Styled) -->
+        <div class="w-full max-w-3xl space-y-6 mx-auto">
+            <div class="text-center">
+                <h2 class="font-serif text-2xl text-brand-charcoal font-bold">Interaktive Tauf-Werkzeuge</h2>
+                <p class="text-xs text-gray-500 mt-1">Planen und gestalten Sie gemeinsam mit uns diesen besonderen Tag</p>
+            </div>
+
+            <!-- Single centered card with max-w-3xl width parity -->
+            <div class="bg-white rounded-3xl p-8 border border-brand-softLilac/40 shadow-orion hover:shadow-orionHover transition-all duration-300 flex flex-col justify-between space-y-6 transform hover:-translate-y-1 w-full">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="text-3xl">📖</span>
+                        <span class="bg-brand-softLilac/50 text-brand-darkLilac text-[10px] uppercase font-bold px-2.5 py-1 rounded-full">Gemeinschaft</span>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-charcoal font-bold">Die Fürbitten-Kollektion</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Wählen Sie aus zehn handverlesenen und tiefgründigen Fürbitten Ihre Favoriten aus. Weisen Sie Familienmitgliedern und Paten Lesungen zu und drucken Sie das fertige Dokument direkt für die Kirche aus.
+                    </p>
+                </div>
+                <div class="pt-4">
+                    <a href="./fuerbitten_kollektion.html" class="inline-block w-full text-center py-3.5 px-6 rounded-xl font-bold text-sm orion-button-lilac">
+                        Fürbitten aussuchen
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-cream py-10 border-t border-brand-softLilac/20 text-center px-4 space-y-2">
+        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">In Liebe gestaltet für Hanna von Sylvie und Paul</p>
+        <p class="text-[10px] text-gray-400">Sonntag, 30. August 2026 | Vicelinkirche Norderstedt & Familiengarten</p>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-charcoal text-brand-cream text-sm py-3 px-6 rounded-2xl shadow-xl transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2">
+        <span id="toast-message">Meldung gesendet!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Set target date: Sunday, 30 August 2026 at 11:15:00
+        const targetDate = new Date("August 30, 2026 11:15:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+        }
+
+        // Run immediately and then every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // RSVP WhatsApp Formatter and Redirect
+        function sendRSVP() {
+            const name = document.getElementById('rsvp-name').value.trim();
+            const status = document.getElementById('rsvp-status').value;
+            const diet = document.getElementById('rsvp-diet').value.trim();
+
+            if (!name) {
+                showToast('Bitte geben Sie einen Namen ein!');
+                return;
+            }
+
+            let statusText = '';
+            if (status === 'kirche-garten') statusText = 'Ich komme super gerne zu beidem (Kirche und Gartenparty)!';
+            else if (status === 'nur-kirche') statusText = 'Ich werde bei der feierlichen Kirche dabei sein!';
+            else if (status === 'nur-garten') statusText = 'Ich komme direkt zur gemütlichen Gartenparty!';
+            else if (status === 'absage') statusText = 'Ich kann leider nicht persönlich dabei sein, wünsche euch aber einen wunderschönen Tag!';
+
+            let body = `Liebe Sylvie, lieber Paul,\n\nhier ist meine Rückmeldung zur Taufe von Hanna:\n\nName: ${name}\nStatus: ${statusText}`;
+            if (diet) {
+                body += `\nBesonderheiten (Essen): ${diet}`;
+            }
+            body += `\n\nLiebe Grüße!`;
+
+            const encoded = encodeURIComponent(body);
+            // Open user's WhatsApp directly
+            window.open(`https://wa.me/?text=${encoded}`, '_blank');
+            showToast('Rückmeldung für WhatsApp wurde vorbereitet!');
+        }
+
+        // Global Toast Display Helper
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.innerText = message;
+            
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+
+</body>
+</html>
